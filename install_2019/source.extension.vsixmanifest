@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="SignVsix.0f28e1e5-5a3e-4328-90e5-982827292d84" Version="1.2.1" Language="en-US" Publisher="Matt Lacey" />
-        <DisplayName>Sign VSIX</DisplayName>
-        <Description xml:space="preserve">Adds the ability to sign a VSIX package from within Visual Studio. Originally from https://github.com/madskristensen/ExtensibilityTools but now with VS2019 support.</Description>
+        <Identity Id="SignVsix2019.9a5557e4-94bc-4159-93c1-1f4204fb7ad0" Version="1.0.0" Language="en-US" Publisher="Rebecca Heineman" />
+        <DisplayName>Sign VSIX 2019</DisplayName>
+        <Description xml:space="preserve">Adds the ability to sign a VSIX package from within Visual Studio. Originally from https://github.com/mrlacey/SignVsix.</Description>
         <MoreInfo>https://github.com/burgerbecky/SignVsix</MoreInfo>
         <Icon>SignVsix.ico</Icon>
-        <Tags>VSIX</Tags>
+        <Tags>VSIX, compiler, sign, signtool</Tags>
     </Metadata>
-    <Installation>
+    <Installation AllUsers="true">
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[16.0, 17.0)" />
+        <InstallationTarget Version="[16.0,17.0)" Id="Microsoft.VisualStudio.Pro" />
+        <InstallationTarget Version="[16.0,17.0)" Id="Microsoft.VisualStudio.Enterprise" />
+        <InstallationTarget Version="[16.0,17.0)" Id="Microsoft.VisualStudio.IntegratedShell" />
     </Installation>
-    <Dependencies>
-        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
-    </Dependencies>
     <Prerequisites>
         <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[16.0,17.0)" DisplayName="Visual Studio core editor" />
     </Prerequisites>
+    <Dependencies>
+        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+    </Dependencies>
     <Assets>
         <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
     </Assets>
