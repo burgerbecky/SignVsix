@@ -34,7 +34,7 @@ namespace SignVsix.VSCT
         /// </summary>
         protected override void SetupCommands()
         {
-           // AddCommand(PackageGuids.guidExtensibilityToolsCmdSet, PackageIds.cmdSignBinary, ShowSignBinaryUI, CheckForExtensibilityPackageFlavorBeforeQueryStatus);
+            // AddCommand(PackageGuids.guidExtensibilityToolsCmdSet, PackageIds.cmdSignBinary, ShowSignBinaryUI, CheckForExtensibilityPackageFlavorBeforeQueryStatus);
             AddCommand(new Guid("74cedb39-d9e6-4fec-a72e-145d1cde1fdb"), 4129, ShowSignBinaryUI, CheckForExtensibilityPackageFlavorBeforeQueryStatus);
         }
 
@@ -69,9 +69,9 @@ namespace SignVsix.VSCT
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            OleMenuCommand button = (OleMenuCommand) sender;
+            OleMenuCommand button = (OleMenuCommand)sender;
             button.Visible = false;
-            
+
             _project = ProjectHelpers.GetSelectedItem() as Project;
             if (_project == null)
                 return;

@@ -36,7 +36,7 @@ namespace SignVsix.VSCT
 
             return _openPackageDialog = openFile;
         }
-        
+
         /// <summary>
         /// Creates dialog to point to certificate file.
         /// </summary>

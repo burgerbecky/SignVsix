@@ -75,8 +75,8 @@ namespace SignVsix.VSCT
                 {
                     ActiveControl = txtCertificatePath;
                 }
-            } 
-            
+            }
+
         }
 
         private void txtSubjectFilter_TextChanged(object sender, EventArgs e)
@@ -125,7 +125,7 @@ namespace SignVsix.VSCT
                 return;
             }
 
-            var certificate = cmbCertificates.SelectedItem != null ? ((ComboBoxItem) cmbCertificates.SelectedItem).Data as X509Certificate2 : null;
+            var certificate = cmbCertificates.SelectedItem != null ? ((ComboBoxItem)cmbCertificates.SelectedItem).Data as X509Certificate2 : null;
             if (cmbCertificates.Enabled && certificate == null)
             {
                 MessageBox.Show("You must select a valid certificate.", AppTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);

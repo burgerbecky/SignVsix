@@ -4,7 +4,7 @@
         <Identity Id="SignVsix.0f28e1e5-5a3e-4328-90e5-982827292d84" Version="1.2.1" Language="en-US" Publisher="Matt Lacey" />
         <DisplayName>Sign VSIX</DisplayName>
         <Description xml:space="preserve">Adds the ability to sign a VSIX package from within Visual Studio. Originally from https://github.com/madskristensen/ExtensibilityTools but now with VS2019 support.</Description>
-        <MoreInfo>https://github.com/mrlacey/SignVsix</MoreInfo>
+        <MoreInfo>https://github.com/burgerbecky/SignVsix</MoreInfo>
         <Icon>SignVsix.ico</Icon>
         <Tags>VSIX</Tags>
     </Metadata>
