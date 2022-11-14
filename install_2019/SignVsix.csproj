@@ -47,18 +47,18 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignVsixPackage.cs" />
-    <Compile Include="VSCT\BaseCommand.cs" />
-    <Compile Include="VSCT\CertificateHelper.cs" />
-    <Compile Include="VSCT\ComboBoxItem.cs" />
-    <Compile Include="VSCT\DialogHelper.cs" />
-    <Compile Include="VSCT\Logger.cs" />
-    <Compile Include="VSCT\ProjectHelpers.cs" />
-    <Compile Include="VSCT\SignBinaryCommand.cs" />
-    <Compile Include="VSCT\SignerHelper.cs" />
-    <Compile Include="VSCT\SignForm.cs">
+    <Compile Include="..\source\BaseCommand.cs" />
+    <Compile Include="..\source\CertificateHelper.cs" />
+    <Compile Include="..\source\ComboBoxItem.cs" />
+    <Compile Include="..\source\DialogHelper.cs" />
+    <Compile Include="..\source\Logger.cs" />
+    <Compile Include="..\source\ProjectHelpers.cs" />
+    <Compile Include="..\source\SignBinaryCommand.cs" />
+    <Compile Include="..\source\SignerHelper.cs" />
+    <Compile Include="..\source\SignForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VSCT\SignForm.Designer.cs" />
+    <Compile Include="..\source\SignForm.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <VSCTCompile Include="SignVsixPackage.vsct">
@@ -83,10 +83,10 @@
     <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="16.1.3128" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="VSCT\SignForm.resx" />
+    <EmbeddedResource Include="..\source\SignForm.resx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SignVsix.ico">
+    <Content Include="..\source\SignVsix.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
